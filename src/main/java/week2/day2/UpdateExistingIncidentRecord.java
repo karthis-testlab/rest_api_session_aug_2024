@@ -5,10 +5,12 @@ import io.restassured.RestAssured;
 public class UpdateExistingIncidentRecord {
 
 	public static void main(String[] args) {
-		String updatePaylod = "{\r\n"
-				+ "    \"short_description\": \"My Offic PC unable to reboot.\",\r\n"
-				+ "    \"description\": \"DELL PC\"\r\n"
-				+ "}";
+		String updatePaylod = """
+				{
+				  "short_description": "My Offic PC unable to reboot.",
+				  "description": "DELL PC"
+				}
+				""";
 		String url = "https://dev262949.service-now.com/api/now/table/incident/f1d6bc6283145210695bc7b6feaad36a";
 		RestAssured.given()
         .auth()

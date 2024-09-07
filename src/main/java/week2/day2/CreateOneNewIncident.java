@@ -6,11 +6,13 @@ public class CreateOneNewIncident {
 	
 	public static void main(String[] args) {
 		String url = "https://dev262949.service-now.com/api/now/table/incident";
-		String requestPayload = "{\r\n"
-				+ "    \"caller_id\": \"413a4d35eb32010045e1a5115206fe6b\",\r\n"
-				+ "    \"short_description\": \"Short Description for RAS\",\r\n"
-				+ "    \"description\": \"RAS\"\r\n"
-				+ "}";
+		String requestPayload = """
+				{
+				 "caller_id": "413a4d35eb32010045e1a5115206fe6b",
+				 "short_description": "Short Description for RAS",
+				 "description": "RAS"
+				}
+				""";
 		RestAssured.given()
 		           .auth()
 		           .basic("admin", "vW0eDfd+A0V-")
@@ -22,8 +24,7 @@ public class CreateOneNewIncident {
 		           .post(url)
 		           .then()
 		           .log()
-		           .all();
-        
+		           .all();        
 	}
 
 }
