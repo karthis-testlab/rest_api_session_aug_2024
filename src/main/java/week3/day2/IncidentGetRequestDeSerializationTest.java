@@ -19,7 +19,8 @@ public class IncidentGetRequestDeSerializationTest {
 		.basic(getUserName(), getPassword())
 		.pathParam("table_name", "incident")
 		.queryParam("sysparm_limit", 3)
-		.queryParam("sysparm_fields", "number,sys_id,description,short_description,category,opened_at")
+		.queryParam("sysparm_fields", "number,sys_id,description,short_description,category,opened_at,caller_id")
+		.queryParam("sysparm_query", "category=hardware")
 		.when()
 		.get(url)
 		.then()
@@ -34,6 +35,8 @@ public class IncidentGetRequestDeSerializationTest {
 			System.out.println(resultModal.getCategory());
 			System.out.println(resultModal.getOpened_at());
 			System.out.println(resultModal.getSys_id());
+			System.out.println(resultModal.getCaller_id().getValue());
+			System.out.println(resultModal.getCaller_id().getLink());
 			System.out.println(" ");
 		}
 	}
