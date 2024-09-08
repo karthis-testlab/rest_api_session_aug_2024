@@ -2,6 +2,8 @@ package week3.day1;
 
 import static io.restassured.RestAssured.*;
 
+import week3.day2.Config;
+
 public class CreateOAuthToken {
 
 	public static void main(String[] args) {
@@ -10,10 +12,10 @@ public class CreateOAuthToken {
 		String access_token = given()
 		.header("Content-Type", "application/x-www-form-urlencoded")
 		.formParam("grant_type", "password")
-		.formParam("client_id", "c91a806ab7981210dcb0a51cb42164af")
-		.formParam("client_secret", "~1E)cj#]`+")
-		.formParam("username", "admin")
-		.formParam("password", "vW0eDfd+A0V-")
+		.formParam("client_id", Config.getClientId())
+		.formParam("client_secret", Config.getClientSecret())
+		.formParam("username", Config.getUserName())
+		.formParam("password", Config.getPassword())
 		.when()
 		.post(url)
 		.then()

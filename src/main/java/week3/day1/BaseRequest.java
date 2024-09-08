@@ -7,6 +7,8 @@ import static io.restassured.RestAssured.basic;
 
 import org.testng.annotations.BeforeMethod;
 
+import week3.day2.Config;
+
 public class BaseRequest {
 	
 	protected String sys_id;
@@ -15,7 +17,7 @@ public class BaseRequest {
 	public void beforeMethod() {		
 		baseURI =  "https://dev262949.service-now.com";
 		basePath = "/api/now/table/{table_name}";
-		authentication = basic("admin", "vW0eDfd+A0V-");
+		authentication = basic(Config.getUserName(), Config.getPassword());
 	}
 
 }
