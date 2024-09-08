@@ -5,7 +5,8 @@ import static week3.day2.Config.getPassword;
 import static week3.day2.Config.getUserName;
 
 import java.util.List;
-
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 import org.testng.annotations.Test;
 
 public class IncidentGetRequestDeSerializationTest {
@@ -36,8 +37,12 @@ public class IncidentGetRequestDeSerializationTest {
 			System.out.println(resultModal.getOpened_at());
 			System.out.println(resultModal.getSys_id());
 			System.out.println(resultModal.getCaller_id().getValue());
-			System.out.println(resultModal.getCaller_id().getLink());
+			System.out.println(resultModal.getCaller_id().getLink());			
 			System.out.println(" ");
+			
+			//Assert the get all incident records only hardware category
+			assertThat(resultModal.getCategory(), equalTo("hardware"));
+			
 		}
 	}
 
