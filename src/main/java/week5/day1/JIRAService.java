@@ -14,7 +14,7 @@ public class JIRAService {
 		RestAssured.given()
 		           .auth()
 		           .preemptive()
-		           .basic("karthike.selene@gmail.com", "ATATT3xFfGF0eenMiSNCmo6rgh24ht-bMCqJ_0rp6dqv-G0vmpllmyFc05PQZDnDJ0MwkNW4UA7tmcRjO9DaKjoKCilZfh2-AHlyCg9-HJr5N8a9il08xkl1uKit4kAkU1lWMhxjRaoUZ7d_ejigUcvqtELDWL7CehN4mbfJT7tQ1CtLSRMNwYQ=EE0D6494")
+		           .basic("karthike.selene@gmail.com", "")
 		           .header("X-Atlassian-Token", "no-check")
 		           .pathParam("issueIdOrKey", "10020")
 		           .log()
