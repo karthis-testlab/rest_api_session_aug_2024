@@ -1,0 +1,40 @@
+{
+  "url": "http://localhost:3000/login",
+  "extensionVersion": "4.83.0",
+  "axeVersion": "4.9.1",
+  "standard": "WCAG 2.1 AA",
+  "testingStartDate": "2024-07-22T11:53:25.273Z",
+  "testingEndDate": "2024-07-22T11:53:25.273Z",
+  "bestPracticesEnabled": false,
+  "experimentalEnabled": false,
+  "issueSummary": {
+    "critical": 0,
+    "serious": 0,
+    "moderate": 0,
+    "minor": 0,
+    "bestPractices": 0,
+    "needsReview": 0
+  },
+  "remainingTestingSummary": {
+    "run": false
+  },
+  "igtSummary": [],
+  "failedRules": [],
+  "needsReview": [],
+  "source": {
+    "productName": "axe-devtools-html",
+    "productVersion": "4.83.0",
+    "productComponentName": "extension-chrome"
+  },
+  "testDetails": {
+    "testId": "",
+    "axeVersion": "4.9.1",
+    "engine": "axe-core",
+    "standard": "WCAG 2.1 AA",
+    "startDate": "2024-07-22T11:53:25.273Z",
+    "endDate": "2024-07-22T11:53:25.273Z",
+    "bestPracticesEnabled": false,
+    "experimentalEnabled": false
+  },
+  "allIssues": []
+}

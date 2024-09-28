@@ -40,5 +40,16 @@
 			<artifactId>gson</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-	</dependencies>	
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>5.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.wiremock</groupId>
+			<artifactId>wiremock</artifactId>
+			<version>3.9.1</version>			
+		</dependency>
+	</dependencies>		
 </project>

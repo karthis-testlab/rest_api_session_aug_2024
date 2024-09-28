@@ -23,7 +23,7 @@ public class IncidentTestScript {
 		
 		String url = "https://dev262949.service-now.com/api/now/table/{table_name}";		
 		RestAssured.given()
-		           .auth()
+		           .auth()		           
 		           .basic(Config.getUserName(), Config.getPassword())
 		           .header("Content-Type", "application/json")
 		           .pathParam("table_name", "incident")
